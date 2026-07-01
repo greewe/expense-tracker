@@ -1,0 +1,6 @@
+#import the tools
+import requests
+import csv
+
+# configuration ( fixed values)
+URL= 'https://gitlab.com/api/v4/projects?membership=true'
