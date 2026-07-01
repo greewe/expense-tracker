@@ -1,11 +1,18 @@
 import csv
 goal=25000
 expenses=[]
-with open('expenses.csv','r') as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-        row['amount']=int(row['amount'])
-        expenses.append(row)
+try:
+    with open("expenses.csv") as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            try:
+                row['amount']= int(row['amount'])
+            except ValueError:
+                print("skipping invalid amount:",row['amount'])
+                continue
+            expenses.append(row)
+except FileNotFoundError:
+    print("error: expenses.csv not found")
 print(expenses)
 
 category_totals = {}

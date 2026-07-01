@@ -6,7 +6,7 @@ A Python tool that reads expenses from a CSV file and tracks spending by categor
 - Reads expenses from expenses.csv
 - Groups total spending by category 
 - Shows grand total spent
-- Shows hoe much is remaining to reach savings goal
+- Shows how much is remaining to reach savings goal
 
 
 ## How to run
